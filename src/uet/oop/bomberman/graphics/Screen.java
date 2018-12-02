@@ -114,9 +114,19 @@ public class Screen {
 	public void drawPaused(Graphics g) {
 		Font font = new Font("Arial", Font.PLAIN, 20 * Game.SCALE);
 		g.setFont(font);
-		g.setColor(Color.white);
+		g.setColor(Color.cyan);
 		drawCenteredString("PAUSED", getRealWidth(), getRealHeight(), g);
 		
+	}
+
+	public void drawGameClear(Graphics g) {
+		g.setColor(Color.PINK);
+		g.fillRect(0, 0, getRealWidth(), getRealHeight());
+
+		Font font = new Font("Arial", Font.PLAIN, 20 * Game.SCALE);
+		g.setFont(font);
+		g.setColor(Color.darkGray);
+		drawCenteredString("GAME CLEAR", getRealWidth(), getRealHeight(), g);
 	}
 
 	public void drawCenteredString(String s, int w, int h, Graphics g) {
